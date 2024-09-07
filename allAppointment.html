@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <!-- *********** nav bar *************** -->
+    <nav>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            
+            <div class="container-fluid container">
+              <div class="d-flex gap-2 p-3 fw-bold">
+                <img src="./Images/stethoscope 1.png" alt="">
+                <a class="navbar-brand " href="#">Smart Care</a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto d-flex gap-4">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                  </li>
+
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                      Profile
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                      <li><a class="dropdown-item active" href="userDetails.html">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">All Appointment</a></li>
+                      <li onclick="handleLogout()"><a class="dropdown-item">Logout</a></li>
+                      
+                      
+                    </ul>
+                  </div>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </nav>
+
+    <!-- *********** User All Appointment ***************** -->
+     <div id="users-all-appointment" class="users-all-appointment">
+
+        <div class="appointmet-table text-center">
+
+          <div class="container table-responsive  mt-5">
+            <h2 class="text-center p-2">All Appointment here</h2>
+            <table class="table table-bordered table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th>ID</th>
+                  
+                  <th>Appointment Type</th>
+                  <th>Appointment Status</th>
+                  <th>symtomp</th>
+                  <th>Time</th>
+                  <th>Cancel</th>
+                  <th>Fess</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="table-info">
+                
+              
+
+                <tr>
+                  
+                </tr>
+            
+                
+              </tbody>
+            </table>
+          </div>
+            
+        </div>
+          
+
+     </div>
+
+    <footer class="p-5">
+        <div class="row container text-center mb-5">
+          <div class="col-md-6">
+            <h5>Copyright @ Smartcare All regions</h5>
+            <p>Reversed</p>
+            <p>Follow Us</p>
+            <img src="./Images/LinkedIn.png" alt="">
+            <img src="./Images/LinkedIn.png" alt="">
+            <img src="./Images/YouTube.png" alt="">
+  
+          </div>
+          <div class="col-md-3">
+            <h5 class="mt-2">Categories</h5>
+            <li class="fotter-list">About</li>
+            <li class="fotter-list">Contact Us</li>
+            <li class="fotter-list">Carrier</li>
+            <li class="fotter-list">Culture</li>
+            <li class="fotter-list">Blog</li>
+          </div>
+          <div class="col-md-3">
+            <h5 class="mt-2">Support</h5>
+            <li class="fotter-list">Getting Started</li>
+            <li class="fotter-list">Help Center</li>
+            <li class="fotter-list">Server Status</li>
+            <li class="fotter-list">Report a bug</li>
+            <li class="fotter-list">Chat support</li>
+          </div>
+          </div>
+          <hr>
+          <p class="text-center mt-3">
+            <small>Copyright © Smartcare. All Rights Reserved</small>
+          </p>
+        </div>
+      </footer>
+  
+  
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  
+      <script src="app.js"></script>
+      <script src="auth.js"></script>
+      <script src="userDetails.js"></script>
+
+</body>
+</html>

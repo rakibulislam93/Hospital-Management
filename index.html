@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- ******** navbar and banner part here ***************** -->
+    <header>
+
+        <nav>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                
+                <div class="container-fluid container">
+                  <div class="d-flex gap-2 p-3 fw-bold">
+                    <img src="./Images/stethoscope 1.png" alt="">
+                    <a class="navbar-brand " href="#">Smart Care</a>
+                  </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav m-auto d-flex gap-4">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" target="_blank" href="login.html">Login</a>
+                      </li>
+
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                          Profile
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item active" href="userDetails.html">Profile</a></li>
+                          <li><a class="dropdown-item" href="allAppointment.html">All Appointment</a></li>
+                          <li onclick="handleLogout()"><a class="dropdown-item">Logout</a></li>
+                          
+                          
+                        </ul>
+                      </div>
+
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </nav>
+        
+        
+        <div class="banner-container container mt-5 p-3">
+            <h2>HI, I AM <span style="color:rgb(59, 59, 228)">RAKIBUL ISLAM</span></h2>
+            <div class="banner d-flex justify-content-between">
+                <div class="banner-text p-3 text-center">
+                    <h1>Providing Quality <br>Healthcare</h1>
+                    <p class="w-50 m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aspernatur quod laborum tempora, consequuntur debitis ut ducimus officiis praesentium!</p>
+                </div>
+                <div class="banner-img">
+                    <img class="doc-image" src="./Images/doc.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+
+    </header>
+
+    <!-- ######### Services part ########### -->
+    <main>
+        <div class="services-container container text-center mt-5 p-5">
+            <h1 style="color: aqua;">Services we provide</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, excepturi.</p>
+            
+            <div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein">
+                <ul id="service-container" class="slider-container py-4">
+                    
+                </ul>
+            
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            
+                <div class="slider-indicators">
+                    <button class="" aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide" class=""></button>
+                    <button aria-label="Go to slide" class="active"></button>
+                    <button aria-label="Go to slide"></button>
+                    <button aria-label="Go to slide"></button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- ####### Doctor section ##########  -->
+         <div class="doctor-container container row d-flex justify-content-center">
+          <div class="col-md-6 text-center d-flex justify-content-center gap-3">
+            <div id="dropdown" class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Designation
+              </button>
+              <ul id="des-dropdown" class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+               
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Specialization
+              </button>
+              <ul id="spe-dropdown" class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+               
+              </ul>
+            </div>
+           </div>
+
+           <div class="col-md-6">
+            <input id="search-box " class="search-box mt-3" type="text"placeholder="search....">
+            <button class="btn btn-warning"onclick="handleSearch()">Search</button>
+            <div id="doctors" class="doctors d-flex flex-wrap gap-2">
+              
+            </div>
+            <div id="nodata" class="nodata">
+              <img src="./Images/nodata.png" alt="">
+            </div>
+            <div id="lodding" class="lodding">
+              <img class="lodding-image" src="./Images/loading2.jpg" alt="">
+            </div>
+           </div>
+         </div>
+
+    <!-- ***************** Doctor Review Section ************** -->
+    <div class="review-container p-5 mt-5 w-75 m-auto">
+      <h1 class="title text-center">Clients Review about us</h1>
+      <p class="description text-center w-50 m-auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+        <br />
+        quis sit, aperiam deserunt at accusamus!
+      </p>
+      <div class="reviews">
+        <div
+          class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible"
+        >
+          <ul id="review-container" class="slider-container py-4"></ul>
+
+          <button
+            type="button"
+            class="slider-nav"
+            aria-label="Go left"
+          ></button>
+          <button
+            type="button"
+            class="slider-nav slider-nav-next"
+            aria-label="Go left"
+          ></button>
+
+          <div class="slider-indicators">
+            <button class="active" aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide" class=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </main>
+    <footer class="p-5">
+      <div class="row container text-center mb-5">
+        <div class="col-md-6">
+          <h5>Copyright @ Smartcare All regions</h5>
+          <p>Reversed</p>
+          <p>Follow Us</p>
+          <img src="./Images/LinkedIn.png" alt="">
+          <img src="./Images/LinkedIn.png" alt="">
+          <img src="./Images/YouTube.png" alt="">
+
+        </div>
+        <div class="col-md-3">
+          <h5 class="mt-2">Categories</h5>
+          <li class="fotter-list">About</li>
+          <li class="fotter-list">Contact Us</li>
+          <li class="fotter-list">Carrier</li>
+          <li class="fotter-list">Culture</li>
+          <li class="fotter-list">Blog</li>
+        </div>
+        <div class="col-md-3">
+          <h5 class="mt-2">Support</h5>
+          <li class="fotter-list">Getting Started</li>
+          <li class="fotter-list">Help Center</li>
+          <li class="fotter-list">Server Status</li>
+          <li class="fotter-list">Report a bug</li>
+          <li class="fotter-list">Chat support</li>
+        </div>
+        </div>
+        <hr>
+        <p class="text-center mt-3">
+          <small>Copyright © Smartcare. All Rights Reserved</small>
+        </p>
+      </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+
+    <script src="app.js"></script>
+    <script src="logout.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
